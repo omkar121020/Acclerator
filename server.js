@@ -9,6 +9,13 @@ var http = require('http');
 var exec = require('child_process').exec;
 var configLoader = require('./configLoader.js');
 var config = configLoader.getConfigs();
+var https = require('https')
+var fs1 = require('fs')
+const crypto = require('crypto');
+
+
+
+
 
 var httpPort = config["http"]["port"] || 8080;
 
@@ -133,6 +140,15 @@ setTimeout(function () {
     console.log("--------------------------------------");
 }, 200);
 
+// var https_option ={
+//     key:fs1.readFileSync("../key/Private-key.pem"),
+//     cert:fs1.readFileSync("../key/certificate.pem")
+// }
+// https.createServer(options, function (req, res) {
+//     console.log("Httttttps",https_option)
+//     res.writeHead(200);
+//     res.end("Welcome to Node.js HTTPS Server");
+//     }).listen(8081)
 
 /*************************/
 /*** INTERESTING STUFF ***/
