@@ -307,16 +307,17 @@ var init = async function (io, newConfig) {
         try {
             browser = await puppeteer.launch({
                 headless: true,
-                //executablePath: 'C:/Program Files (x86)/Google/Chrome/Application/chrome.exe',
+                // executablePath: '/path/to/chrome',
+                executablePath: 'C:/Program Files (x86)/Google/Chrome/Application/chrome.exe',
                 //executablePath: 'C:/Users/Cracker/AppData/Local/Google/Chrome SxS/Application/chrome.exe',
                 "ignoreHTTPSErrors": true,
                 args: [
+                    '--enable-gpu',
                     '--ignore-certificate-errors',
                     '--no-sandbox',
                     '--disable-dev-shm-usage',
                     '--disable-setuid-sandbox',
                     '--enable-experimental-web-platform-features',
-                    '--enable-gpu'
                 ]
             });
         } catch (e) {
