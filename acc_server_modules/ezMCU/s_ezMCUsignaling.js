@@ -308,7 +308,7 @@ var init = async function (io, newConfig) {
             browser = await puppeteer.launch({
                 headless: true,
                 // executablePath: '/path/to/chrome',
-                executablePath: 'C:/Program Files (x86)/Google/Chrome/Application/chrome.exe',
+                // executablePath: 'C:/Program Files (x86)/Google/Chrome/Application/chrome.exe',
                 //executablePath: 'C:/Users/Cracker/AppData/Local/Google/Chrome SxS/Application/chrome.exe',
                 "ignoreHTTPSErrors": true,
                 args: [
